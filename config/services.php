@@ -31,4 +31,9 @@ return [
         ],
     ],
 
+    'dub' => [
+        'token' => env('DUB_TOKEN'),
+        'workspace' => env('DUB_WORKSPACE'),
+    ],
+
 ];

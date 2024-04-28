@@ -1,23 +1,28 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
+use App\Models\Source;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+final class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
-
         User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Steve McDougall',
+            'email' => 'juststevemcd@gmail.com',
+        ]);
+
+        Source::factory()->create([
+            'name' => 'Laravel News',
+            'logo' => 'https://static.feedpress.com/logo/laravelnews-6027ee343fdff.png',
+            'url' => 'https://www.laravel-news.com',
+            'feed' => 'https://feed.laravel-news.com',
+            'description' => 'Your official Laravel news source.'
         ]);
     }
 }

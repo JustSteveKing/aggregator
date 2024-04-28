@@ -6,11 +6,13 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "dg/rss-php": "^1.5",
         "inertiajs/inertia-laravel": "^1.0",
         "laravel/breeze": "^2.0",
         "laravel/framework": "^11.0",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
+        "saloonphp/xml-wrangler": "^1.2",
         "tightenco/ziggy": "^2.0"
     },
     "require-dev": {

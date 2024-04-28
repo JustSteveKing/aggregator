@@ -1,12 +1,21 @@
-import './bootstrap';
 import '../css/app.css';
 
+import axios from 'axios';
 import { createApp, h, DefineComponent } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
+import { Dub } from "dub";
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+
+window.axios = axios;
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+window.dub = new Dub({
+    token: import.meta.env.VITE_DUB_TOKEN,
+    workspaceId: import.meta.env.VITE_DUB_WORKSPACE,
+});
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
